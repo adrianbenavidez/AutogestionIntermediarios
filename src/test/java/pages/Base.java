@@ -56,5 +56,16 @@ public class Base {
 	public void visit(String url) {
 		driver.get(url);
 	}
+	
+	public String obtenerTituloPagina() {
+		return driver.getTitle().toString();
+	}
+	
+	public void cerrarDriver() {
+		driver.close();
+	}
 
+	public void salirDriver() {
+		driver.quit();
+	}
 }

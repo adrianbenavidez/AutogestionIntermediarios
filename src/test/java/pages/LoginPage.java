@@ -15,16 +15,38 @@ public class LoginPage extends Base {
 		// TODO Auto-generated constructor stub
 	}
 
-	public void loginPage() {
+	public void ingresarCampos() {
 
 		esperar(inputCorreo, 5);
 
 		if (isDisplayed(inputCorreo)) {
 			type("productor@psalud.com", inputCorreo);
 			type("123456", inputClave);
+		} else {
+			System.out.println("Some element was not found [inputCorreo]");
+		}
+	}
+
+	public void ingresarCampos(String usuario, String clave) {
+
+		esperar(inputCorreo, 5);
+
+		if (isDisplayed(inputCorreo)) {
+			type(usuario, inputCorreo);
+			type(clave, inputClave);
+		} else {
+			System.out.println("Some element was not found [inputCorreo]");
+		}
+	}
+
+	public void clickIniciarSesion() {
+
+		esperar(buttonIniciar, 5);
+
+		if (isDisplayed(buttonIniciar)) {
 			click(buttonIniciar);
 		} else {
-			System.out.println("Some element was not found");
+			System.out.println("Some element was not found [buttonIniciar]");
 		}
 	}
 
@@ -34,6 +56,11 @@ public class LoginPage extends Base {
 			return true;
 		} else
 			return false;
+	}
+
+	public void closePage() {
+		cerrarDriver();
+		salirDriver();
 	}
 
 }

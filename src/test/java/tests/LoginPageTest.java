@@ -27,7 +27,8 @@ class LoginPageTest {
 
 	@Test
 	void test() throws InterruptedException {
-		page.loginPage();
+		page.ingresarCampos();
+		page.clickIniciarSesion();
 		assertTrue(page.isHomePageDisplayed());
 	}
 
