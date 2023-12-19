@@ -26,17 +26,17 @@ public class LoginSteps {
 	    
 	}
 
-	@Cuando("^ingresa usuario y clave validas$")
-	public void ingresa_usuario_y_clave() {
+	@Cuando("^ingresa credenciales validas$")
+	public void ingresa_credenciales_validas() {
 		System.out.println("desde - ingresa_usuario_y_clave_validas");
 		
 		page.ingresarCampos();
 		
 	}
 	
-	@Cuando("^ingresa (.*) y (.*) validas$")
-	public void ingresa_usuario_y_clave(String usuario, String clave) {
-		System.out.println("desde - ingresa_usuario_y_clave_validas");
+	@Cuando("^ingresa (.*) y (.*)$")
+	public void ingresa_usuario_y_clave_params(String usuario, String clave) {
+		System.out.println("FUNCION CON PARAMETROS");
 		
 		page.ingresarCampos(usuario, clave);
 		

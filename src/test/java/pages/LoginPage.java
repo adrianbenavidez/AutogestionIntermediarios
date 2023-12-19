@@ -5,10 +5,10 @@ import org.openqa.selenium.WebDriver;
 
 public class LoginPage extends Base {
 
-	By inputCorreo = By.id("1-email");
-	By inputClave = By.name("password");
-	By buttonIniciar = By.name("submit");
-	By imgLogoPrevencion = By.xpath("//img[@src=\"/images/logo-ps-agi.svg\"]");
+	private By inputCorreo = By.id("1-email");
+	private By inputClave = By.name("password");
+	private By buttonIniciar = By.name("submit");
+	private By imgLogoPrevencion = By.xpath("//img[@src=\"/images/logo-ps-agi.svg\"]");
 
 	public LoginPage(WebDriver driver) {
 		super(driver);

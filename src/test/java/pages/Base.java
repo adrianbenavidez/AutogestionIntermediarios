@@ -14,7 +14,7 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class Base {
 
-	private WebDriver driver;
+	protected WebDriver driver;
 
 	public Base(WebDriver driver) {
 		this.driver = driver;
