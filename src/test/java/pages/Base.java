@@ -1,6 +1,7 @@
 package pages;
 
 import java.time.Duration;
+import java.util.List;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -32,6 +33,15 @@ public class Base {
 	public WebElement findElement(By locator) {
 		return driver.findElement(locator);
 	}
+	
+	public List<WebElement> findElements(By locator) {
+		return driver.findElements(locator);
+	}
+	
+	public String getTextOfElement(By locator) {
+		return driver.findElement(locator).getText();
+	}
+
 
 	public boolean isDisplayed(By locator) {
 		if (driver.findElement(locator).isDisplayed()) {

@@ -1,6 +1,6 @@
 #Author: hbenavidez@ext.sancorseguros.com
 #Date: 11/12/2023
-@debug
+
 Feature: Varificación de la página de Login
 
   Background: 
