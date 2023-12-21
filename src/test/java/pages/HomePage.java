@@ -18,6 +18,10 @@ public class HomePage extends Base{
 		// TODO Auto-generated constructor stub
 	}
 	
+	public WebDriver getDriver() {
+		return driver;
+	}
+	
 	public boolean isLogoPrevencionDisplayed() {
 		esperar(imgLogoPrevencion,10);
 		if(isDisplayed(imgLogoPrevencion)) return true;

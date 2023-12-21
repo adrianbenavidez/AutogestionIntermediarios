@@ -62,5 +62,6 @@ public class LoginPage extends Base {
 		cerrarDriver();
 		salirDriver();
 	}
+	
 
 }

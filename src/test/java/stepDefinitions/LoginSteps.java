@@ -14,19 +14,19 @@ public class LoginSteps {
 	private WebDriver driver;
 	LoginPage page;
 	
-	@Dado("^un usuario que se encuentra en la pagina de login$")
+	@Dado("un usuario que se encuentra en la pagina de login")
 	public void un_usuario_que_se_encuentra_en_la_pagina_de_login() {
 	    System.out.println("desde - un_usuario_que_se_encuentra_en_la_pagina_de_login");
 	    
 	    page = new LoginPage(driver);
-		driver = page.chromeDriverConnection();
+		driver = LoginPage.chromeDriverConnection();
 		page.visit("https://autogestionintermediarios-tst.prevencionsalud.com.ar");
 		
 		assertEquals("Ingresar con Auth0", page.obtenerTituloPagina()); 
 	    
 	}
 
-	@Cuando("^ingresa credenciales validas$")
+	@Cuando("ingresa credenciales validas")
 	public void ingresa_credenciales_validas() {
 		System.out.println("desde - ingresa_usuario_y_clave_validas");
 		
@@ -42,14 +42,14 @@ public class LoginSteps {
 		
 	}
 
-	@Y("^hace click en iniciar sesion$")
+	@Y("hace click en iniciar sesion")
 	public void hace_click_en_iniciar_sesion() {
 		System.out.println("desde - hace_click_en_ingresar");
 		
 		page.clickIniciarSesion();
 	}
 
-	@Entonces("^navega al home$")
+	@Entonces("navega al home")
 	public void navega_al_home() {
 		System.out.println("desde - navega_al_home");
 		

@@ -1,5 +1,6 @@
 #Author: hbenavidez@ext.sancorseguros.com
 #Date: 19/12/2023
+
 Feature: Verificación del home
 
   Background: 
@@ -8,7 +9,8 @@ Feature: Verificación del home
 
   Scenario: Verificar icono
     Then visualiza el logo de Prevencion Salud
-  
+ 
+
   Scenario Outline: Verificar menu
     Then visualiza los <items de menu>
 

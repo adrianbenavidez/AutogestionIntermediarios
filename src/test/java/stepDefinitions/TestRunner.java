@@ -19,7 +19,7 @@ import io.cucumber.junit.CucumberOptions;
 @RunWith(Cucumber.class)
 @CucumberOptions(features = { "src/test/resources/Features" }, 
 glue = { "stepDefinitions" }, 
-//tags = "@debug", 
+tags = "@debug", 
 plugin = {"json:target/cucumber.json" })
 public class TestRunner {
 }
