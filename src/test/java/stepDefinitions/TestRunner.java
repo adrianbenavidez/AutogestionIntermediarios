@@ -19,7 +19,7 @@ import io.cucumber.junit.CucumberOptions;
 @RunWith(Cucumber.class)
 @CucumberOptions(features = { "src/test/resources/Features" }, 
 glue = { "stepDefinitions" }, 
-tags = "@debug", 
+//tags = "@debug", 
 plugin = {"json:target/cucumber.json" })
 public class TestRunner {
 }
@@ -28,4 +28,8 @@ public class TestRunner {
  * Ubicarse en el directorio del proyecto cd [directorio] 
  * 1. mvn clean test 
  * 2. mvn verify -DskipTests ver el reporte en target }
+ */
+
+/*
+ * para ejecutar solo un tag agregar @debug en el escenario y descomentar la linea 22 del runner
  */
