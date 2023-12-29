@@ -8,7 +8,7 @@ public class LoginPage extends Base {
 	private By inputCorreo = By.id("1-email");
 	private By inputClave = By.name("password");
 	private By buttonIniciar = By.name("submit");
-	private By imgLogoPrevencion = By.xpath("//img[@src=\"/images/logo-ps-agi.svg\"]");
+	private By imgLogoPrevencion = By.xpath("//img[@src='/images/logo-ps-agi.svg']");
 
 	public LoginPage(WebDriver driver) {
 		super(driver);

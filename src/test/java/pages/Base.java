@@ -4,6 +4,7 @@ import java.time.Duration;
 import java.util.List;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -56,6 +57,15 @@ public class Base {
 		} else
 			return false;
 	}
+	
+	
+	public boolean isEnabled(By locator) {
+		if (driver.findElement(locator).isEnabled()) {
+			return true;
+		} else
+			return false;
+	}
+	
 
 	public void type(String text, By locator) {
 		driver.findElement(locator).sendKeys(text);
@@ -70,7 +80,7 @@ public class Base {
 	}
 
 	public void esperar(By locator, int seg) {
-		Wait<WebDriver> wait = new WebDriverWait(driver, Duration.ofSeconds(5));
+		Wait<WebDriver> wait = new WebDriverWait(driver, Duration.ofSeconds(seg));
 		wait.until(d -> driver.findElement(locator).isDisplayed());
 	}
 
